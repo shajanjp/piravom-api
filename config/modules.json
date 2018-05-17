@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "name": "buses",
+    "title": "Buses",
+    "root": "/buses"
+  }
+]

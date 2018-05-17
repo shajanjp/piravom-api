@@ -1,0 +1,8 @@
+{
+  "name" : "buses",
+  "title" : "Buses",
+  "description" : "Buses will be buses !",
+  "routes": ["buses.server.route.js"],
+  "models": ["buses.server.model.js"],
+  "root": "/buses"
+}

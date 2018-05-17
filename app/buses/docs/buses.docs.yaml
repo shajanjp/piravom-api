@@ -1,0 +1,103 @@
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+tags:
+- name: "Buses"
+  description: "Buses APIs" 
+/api/buses:
+  post:
+    summary: Create bus
+    description: Create a bus by data provided
+    security:
+    - Bearer: []
+    tags:
+    - Buses
+    responses:
+      201:
+        description: Success
+    parameters:
+    - in: body
+      name: Body
+      required: true
+      schema:
+        type: object
+        properties:
+          title: 
+            type: string
+            example: EXAMPLE
+
+  get:
+    summary: List buses
+    description: List buses
+    security:
+    - Bearer: []
+    tags:
+    - Buses
+    responses:
+      200:
+        description: Success
+
+/api/buses/{bus_id}:
+  get:
+    summary: Get bus details
+    description: Get details of specified bus
+    security:
+    - Bearer: []
+    tags:
+    - Buses
+    responses:
+      200:
+        description: Success
+    parameters:
+    - in: path
+      name: bus_id
+      schema:
+        type: string
+      required: true
+      description: Bus ID
+  put:
+    summary: Update bus
+    description: Update bus with provided data
+    security:
+    - Bearer: []
+    tags:
+    - Buses
+    responses:
+      200:
+        description: Success
+    parameters:
+    - in: path
+      name: bus_id
+      schema:
+        type: string
+      required: true
+      description: Bus ID
+    - in: body
+      name: Body
+      required: true
+      schema:
+        type: object
+        properties:
+          title: 
+            type: string
+            example: EXAMPLE
+
+  delete:
+    summary: Remove bus
+    description: Remove specified bus
+    security:
+    - Bearer: []
+    tags:
+    - Buses
+    responses:
+      200:
+        description: Success
+    parameters:
+    - in: path
+      name: bus_id
+      schema:
+        type: string
+      required: true
+      description: Bus ID
