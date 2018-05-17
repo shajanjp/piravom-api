@@ -1,0 +1,9 @@
+{
+  "db": {
+    "url": "mongodb://localhost/blackfiredb"
+  },
+  "app" : {
+    "port": 3000,
+    "host": "localhost"
+  }
+}
