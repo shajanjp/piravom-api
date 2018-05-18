@@ -4,6 +4,6 @@
   },
   "app" : {
     "port": 3000,
-    "host": "localhost"
+    "host": "http://ec2-13-126-215-223.ap-south-1.compute.amazonaws.com"
   }
 }
