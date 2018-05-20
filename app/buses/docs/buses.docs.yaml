@@ -97,6 +97,21 @@ tags:
           title: 
             type: string
             example: EXAMPLE
+          toPlaces: 
+            type: array
+            items:
+              type: string
+          startTime: 
+            type: number
+            example: 990
+          boardingPlace: 
+            type: string
+            example: Private Bus Stand
+          busTags:
+            type: array
+            items:
+              type: string
+              example: LS
 
   delete:
     summary: Remove bus
