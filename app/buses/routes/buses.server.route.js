@@ -7,11 +7,11 @@ router.route('/')
 .post(busValidator.validateInsertBus, busController.insertBus)
 .get(busController.getBuses);
 
-router.route('/:bus_id')
+router.route('/:busId')
 .put(busValidator.validateInsertBus, busController.updateBus)
 .get(busController.getBus)
 .delete(busController.removeBus)
 
-router.param('bus_id', busController.busbyId)
+router.param('busId', busController.busbyId)
 
 module.exports = router;

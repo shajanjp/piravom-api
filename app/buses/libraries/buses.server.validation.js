@@ -2,8 +2,11 @@ const joi = require('joi');
 const mongoId = joi.string().length(24);
 
 const busInsertSchema = joi.object().keys({
-  
   title: joi.string().allow('').optional(),
+  toPlaces: joi.array().items(joi.string().allow('').optional()).optional().default([]),
+  startTime: joi.number().optional(),
+  boardingPlace: joi.string().allow('').max(32).optional(),
+  busTags: joi.array().items(joi.string().allow('').max(16).optional()).optional().default([]),  
 });
 
 exports.validateInsertBus = function (req, res, next) {
