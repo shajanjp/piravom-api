@@ -7,6 +7,7 @@ const busInsertSchema = joi.object().keys({
   startTime: joi.number().optional(),
   boardingPlace: joi.string().allow('').max(32).optional(),
   busTags: joi.array().items(joi.string().allow('').max(16).optional()).optional().default([]),  
+  dow: joi.array().items(joi.number().min(1).max(7).optional()).optional().default([]),
 });
 
 exports.validateInsertBus = function (req, res, next) {

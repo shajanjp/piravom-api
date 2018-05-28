@@ -7,6 +7,7 @@ let busSchema = new Schema({
   startTime: Number,
   busType: String,
   busTags: [String],
+  dow: [Number],
 });
 
 mongoose.model('bus', busSchema);

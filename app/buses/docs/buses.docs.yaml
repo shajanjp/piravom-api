@@ -42,6 +42,11 @@ tags:
             items:
               type: string
               example: LS
+          dow:
+            type: array
+            items:
+              type: number
+              example: 3
   get:
     summary: List buses
     description: List buses
@@ -112,7 +117,11 @@ tags:
             items:
               type: string
               example: LS
-
+          dow:
+            type: array
+            items:
+              type: number
+              example: 3
   delete:
     summary: Remove bus
     description: Remove specified bus
