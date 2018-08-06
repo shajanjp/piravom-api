@@ -15,8 +15,6 @@ body{
 	transition: 0.5s box-shadow ease-in-out;
 }
 
-.flat .item.menu .item:hover,
-.flat .segment:hover,
 .flat .card:hover{
 	-webkit-box-shadow: 0 10px 8px -8px #AAA;
 	box-shadow: 0 10px 8px -8px #AAA;
