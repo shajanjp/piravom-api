@@ -23,9 +23,18 @@ module.exports = function() {
     extended: true,
   }));
 
+  app.use('/public/', express.static('public'));
+
+  app.set('view engine', 'ejs');
+  app.set('views', './app');
+
   app.use(cookieParser());
 
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+  app.get('/', (req, res) => {
+    res.render('common/index.ejs');
+  });
 
   console.log('loading routes...');
   activeModules.forEach((module) => {
