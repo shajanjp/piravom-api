@@ -4,7 +4,9 @@ body{
 .hidden.menu {
   display: none;
 }
-
+.shaded{
+  background-color: #efefef;
+}
 .masthead.segment {
   min-height: 700px;
   padding: 1em 0em;
@@ -94,5 +96,5 @@ body{
 }
 
 #popular-places{
-  padding: 20px 0px;
+  padding: 60px 0px;
 }

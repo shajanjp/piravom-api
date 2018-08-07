@@ -8,19 +8,26 @@ body{
 
 .flat .item.menu .item,
 .flat .segment,
-.flat .card{
-	-webkit-box-shadow: 0 4px 8px -8px #444;
-	box-shadow: 0 4px 8px -8px #444;
-	border-radius: 0px;
+.flat .card {
+	-webkit-box-shadow: 0 4px 8px -8px #444 !important;
+	box-shadow: 0 4px 8px -8px #444 !important;
+	border-radius: 0px !important;
+	border: none;
 	transition: 0.5s box-shadow ease-in-out;
 }
 
+.flat .card .image,
+.flat .card img{
+	border-radius: 0px !important;
+}
+
 .flat .card:hover{
-	-webkit-box-shadow: 0 10px 8px -8px #AAA;
-	box-shadow: 0 10px 8px -8px #AAA;
+	-webkit-box-shadow: 0 10px 8px -8px #AAA !important;
+	box-shadow: 0 10px 8px -8px #AAA !important;
 	border-radius: 0px;
 }
 
-.flat .button{
-  border-radius: 0px;
+.flat .button,
+.flat.button{
+	border-radius: 0px;
 }
