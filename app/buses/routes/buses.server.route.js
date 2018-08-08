@@ -5,7 +5,7 @@ const busValidator = require('../libraries/buses.server.validation.js');
 
 router.route('/')
 .post(busValidator.validateInsertBus, busController.insertBus)
-.get(busController.getBuses);
+.get(busController.getBusesUI);
 
 router.route('/:busId')
 .put(busValidator.validateInsertBus, busController.updateBus)

@@ -29,7 +29,22 @@ exports.insertBus = (req, res) => {
   });
 };
 
-exports.getBuses = (req, res) => {
+exports.getBusesUI = (req, res) => {
+ console.log('getBusesUI');
+  Bus.find({})
+  .then((busList) => {
+    return res.status(200).json(busList);
+  })
+  .catch((err) => {
+    return res.status(500).json({
+      'message': 'Internal error',
+      'errors': err,
+    });
+  });
+};
+
+exports.getBusesAPI = (req, res) => {
+ console.log('getBusesAPI');
   Bus.find({})
   .then((busList) => {
     return res.status(200).json(busList);
