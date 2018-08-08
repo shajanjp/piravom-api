@@ -2,7 +2,8 @@
   "name" : "buses",
   "title" : "Buses",
   "description" : "Buses will be buses !",
-  "routes": ["buses.server.route.js"],
+  "uiRoutes": ["buses.server.route.js"],
+  "apiRoutes": ["buses.server.api.route.js"],
   "models": ["buses.server.model.js"],
   "root": "/buses"
 }
