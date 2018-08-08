@@ -3,5 +3,10 @@
     "name": "buses",
     "title": "Buses",
     "root": "/buses"
+  },
+  {
+    "name": "movies",
+    "title": "Movies",
+    "root": "/movies"
   }
 ]
