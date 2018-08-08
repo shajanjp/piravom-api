@@ -1,0 +1,9 @@
+{
+  "name" : "stores",
+  "title" : "Stores",
+  "description" : "Stores will be stores !",
+  "apiRoutes": ["stores.server.api.route.js"],
+  "uiRoutes": ["stores.server.ui.route.js"],
+  "models": ["stores.server.model.js"],
+  "root": "/stores"
+}

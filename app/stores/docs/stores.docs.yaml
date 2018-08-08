@@ -1,0 +1,103 @@
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+tags:
+- name: "Stores"
+  description: "Stores APIs" 
+/api/stores:
+  post:
+    summary: Create store
+    description: Create a store by data provided
+    security:
+    - Bearer: []
+    tags:
+    - Stores
+    responses:
+      201:
+        description: Success
+    parameters:
+    - in: body
+      name: Body
+      required: true
+      schema:
+        type: object
+        properties:
+          title: 
+            type: string
+            example: EXAMPLE
+
+  get:
+    summary: List stores
+    description: List stores
+    security:
+    - Bearer: []
+    tags:
+    - Stores
+    responses:
+      200:
+        description: Success
+
+/api/stores/{storeId}:
+  get:
+    summary: Get store details
+    description: Get details of specified store
+    security:
+    - Bearer: []
+    tags:
+    - Stores
+    responses:
+      200:
+        description: Success
+    parameters:
+    - in: path
+      name: storeId
+      schema:
+        type: string
+      required: true
+      description: Store ID
+  put:
+    summary: Update store
+    description: Update store with provided data
+    security:
+    - Bearer: []
+    tags:
+    - Stores
+    responses:
+      200:
+        description: Success
+    parameters:
+    - in: path
+      name: storeId
+      schema:
+        type: string
+      required: true
+      description: Store ID
+    - in: body
+      name: Body
+      required: true
+      schema:
+        type: object
+        properties:
+          title: 
+            type: string
+            example: EXAMPLE
+
+  delete:
+    summary: Remove store
+    description: Remove specified store
+    security:
+    - Bearer: []
+    tags:
+    - Stores
+    responses:
+      200:
+        description: Success
+    parameters:
+    - in: path
+      name: storeId
+      schema:
+        type: string
+      required: true
+      description: Store ID

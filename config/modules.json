@@ -8,5 +8,10 @@
     "name": "movies",
     "title": "Movies",
     "root": "/movies"
+  },
+  {
+    "name": "stores",
+    "title": "Stores",
+    "root": "/stores"
   }
 ]
