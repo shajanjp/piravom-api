@@ -1,0 +1,8 @@
+{
+  "name" : "movies",
+  "title" : "Movies",
+  "description" : "Movies will be movies !",
+  "apiRoutes": ["movies.server.api.route.js"],
+  "models": ["movies.server.model.js"],
+  "root": "/movies"
+}

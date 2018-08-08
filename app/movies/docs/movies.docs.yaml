@@ -1,0 +1,103 @@
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+tags:
+- name: "Movies"
+  description: "Movies APIs" 
+/api/movies:
+  post:
+    summary: Create movie
+    description: Create a movie by data provided
+    security:
+    - Bearer: []
+    tags:
+    - Movies
+    responses:
+      201:
+        description: Success
+    parameters:
+    - in: body
+      name: Body
+      required: true
+      schema:
+        type: object
+        properties:
+          title: 
+            type: string
+            example: EXAMPLE
+
+  get:
+    summary: List movies
+    description: List movies
+    security:
+    - Bearer: []
+    tags:
+    - Movies
+    responses:
+      200:
+        description: Success
+
+/api/movies/{movieId}:
+  get:
+    summary: Get movie details
+    description: Get details of specified movie
+    security:
+    - Bearer: []
+    tags:
+    - Movies
+    responses:
+      200:
+        description: Success
+    parameters:
+    - in: path
+      name: movieId
+      schema:
+        type: string
+      required: true
+      description: Movie ID
+  put:
+    summary: Update movie
+    description: Update movie with provided data
+    security:
+    - Bearer: []
+    tags:
+    - Movies
+    responses:
+      200:
+        description: Success
+    parameters:
+    - in: path
+      name: movieId
+      schema:
+        type: string
+      required: true
+      description: Movie ID
+    - in: body
+      name: Body
+      required: true
+      schema:
+        type: object
+        properties:
+          title: 
+            type: string
+            example: EXAMPLE
+
+  delete:
+    summary: Remove movie
+    description: Remove specified movie
+    security:
+    - Bearer: []
+    tags:
+    - Movies
+    responses:
+      200:
+        description: Success
+    parameters:
+    - in: path
+      name: movieId
+      schema:
+        type: string
+      required: true
+      description: Movie ID
