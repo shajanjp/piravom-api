@@ -107,3 +107,9 @@ p.ui.centered{
 #popular-places{
   padding: 60px 0px;
 }
+
+#main-header .menu{
+  border: none;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
