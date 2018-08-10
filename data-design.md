@@ -105,7 +105,6 @@
 
 ## Users
  * full_name : String
- * online : String
  * about : String
  * address : -> Address
  * badges : => [Badge]
@@ -138,3 +137,10 @@
  * description : String 
 
 ## Address
+ * Street
+ * city
+ * landmark
+ * pincode
+ * state
+ * country
+ * phone
