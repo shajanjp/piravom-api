@@ -13,5 +13,10 @@
     "name": "stores",
     "title": "Stores",
     "root": "/stores"
+  },
+  {
+    "name": "users",
+    "title": "Users",
+    "root": "/users"
   }
 ]
