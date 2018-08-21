@@ -11,8 +11,6 @@ let addressSchema = new Schema({
   phone: String,
 });
 
-mongoose.model('address', addressSchema);
-
 module.exports = {
   addressSchema,
 };
